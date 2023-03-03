@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+textarea{
+	display:block;
+    resize: none;
+    margin:0 auto;
+	background-color: #000;
+  	color: #FFF;
+  	font-family: monospace;
+  	font-size: 14px;
+  	padding: 10px 10px;
+  	border-radius: 8px;
+  	border: none;
+
+    }
+div{
+    margin: 5px;
+    margin-top:0px;
+}
+.creator{
+	display:block;
+    margin-top:25px;
+	text-align: right;
+}
+.notification{
+margin: 1em;
+display:block;
+padding:0.5em;
+background-color: #c9c6c5;
+border-radius: 10px;
+font-size: 16px;
+}
+.success{
+background-color: #2de36a;
+}
+.error{
+background-color: #f04a1d;}
+</style>
+</head>
+
+<body>
+<div>
+<h3>Bulk export/import chrome extension</h3>
+<textarea rows="10" cols="60" placeholder="bulk import/export logging" wrap="off" readonly></textarea>
+
+<div id="notify">
+    <span class="notification success" style="display: none;">Use export/import!</span>
+    <span class="notification error" style="display: none;">This page is not an export/import page or this version is not supported</span>
+    <span class="notification success" style="display: none;">Update available!</span>
+</div>
+
+<span class="creator">Creator: <a href="https://github.com/yar-go" target="_blank">khaluza.online</a></span>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

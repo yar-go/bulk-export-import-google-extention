@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Bulk export (Alpha)",
+  "description": "Testing",
+  "version": "1.0",
+  "action": {
+    "default_popup": "pages/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://khaluza.online/",
+    "https://khaluza.online/"
+  ],
+   "content_scripts": [
+    {
+      "js": ["scripts/content.js", "scripts/libs/polyfill.js", "/scripts/libs/exceljs.js"],
+      "run_at": "document_end",
+      "matches": [
+        "http://*/*/index.php?route=extension/export_import*",
+        "https://*/*/index.php?route=extension/export_import*"
+      ]
+    }
+  ]
+}
